@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="48c04702-fb25-472a-9684-803bfa022900">
+	<property name="ireport.zoom" value="1.7715610000000606"/>
+	<property name="ireport.x" value="38"/>
+	<property name="ireport.y" value="193"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="2f05c068-275c-476e-b4af-42d83db7d4d5"/>
+	<subDataset name="data_kelahiran" uuid="f225ece1-f8c9-4e24-9ecc-2296bff1a87a">
+		<parameter name="tgl1" class="java.util.Date">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="tgl2" class="java.util.Date">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT
+     data_kelahiran.`no_kelahiran` AS data_kelahiran_no_kelahiran,
+     data_kelahiran.`nik` AS data_kelahiran_nik,
+     data_kelahiran.`no_kk` AS data_kelahiran_no_kk,
+     data_kelahiran.`tempat_lahir` AS data_kelahiran_tempat_lahir,
+     data_kelahiran.`tgl_lahir` AS data_kelahiran_tgl_lahir,
+     data_kelahiran.`nama_ibu` AS data_kelahiran_nama_ibu,
+     data_kelahiran.`nama_ayah` AS data_kelahiran_nama_ayah,
+     data_kelahiran.`nama_pelapor` AS data_kelahiran_nama_pelapor
+FROM
+     `data_kelahiran` data_kelahiran
+WHERE
+     tgl_lahir BETWEEN $P{tgl1} AND $P{tgl2}]]>
+		</queryString>
+		<field name="data_kelahiran_no_kelahiran" class="java.lang.Integer"/>
+		<field name="data_kelahiran_nik" class="java.lang.String"/>
+		<field name="data_kelahiran_no_kk" class="java.lang.String"/>
+		<field name="data_kelahiran_tempat_lahir" class="java.lang.String"/>
+		<field name="data_kelahiran_tgl_lahir" class="java.sql.Date"/>
+		<field name="data_kelahiran_nama_ibu" class="java.lang.String"/>
+		<field name="data_kelahiran_nama_ayah" class="java.lang.String"/>
+		<field name="data_kelahiran_nama_pelapor" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="tgl1" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tgl2" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nama_ptgs" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nip_ptgs" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     data_kelahiran.`nik` AS data_kelahiran_nik,
+     data_kelahiran.`no_kk` AS data_kelahiran_no_kk,
+     data_kelahiran.`tempat_lahir` AS data_kelahiran_tempat_lahir,
+     data_kelahiran.`kota_lahir` AS data_kelahiran_kota_lahir,
+     data_kelahiran.`tgl_lahir` AS data_kelahiran_tgl_lahir,
+     data_kelahiran.`nama_ayah` AS data_kelahiran_nama_ayah,
+     data_kelahiran.`nama_pelapor` AS data_kelahiran_nama_pelapor,
+     data_kelahiran.`no_kelahiran` AS data_kelahiran_no_kelahiran,
+     data_kelahiran.`nama_ibu` AS data_kelahiran_nama_ibu
+FROM
+     `data_kelahiran` data_kelahiran
+WHERE
+     tgl_lahir BETWEEN $P{tgl1} AND $P{tgl2}]]>
+	</queryString>
+	<field name="data_kelahiran_nik" class="java.lang.String"/>
+	<field name="data_kelahiran_no_kk" class="java.lang.String"/>
+	<field name="data_kelahiran_tempat_lahir" class="java.lang.String"/>
+	<field name="data_kelahiran_kota_lahir" class="java.lang.String"/>
+	<field name="data_kelahiran_tgl_lahir" class="java.sql.Date"/>
+	<field name="data_kelahiran_nama_ayah" class="java.lang.String"/>
+	<field name="data_kelahiran_nama_pelapor" class="java.lang.String"/>
+	<field name="data_kelahiran_no_kelahiran" class="java.lang.String"/>
+	<field name="data_kelahiran_nama_ibu" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="113" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="279" height="20" uuid="24221369-e6d0-4f55-b0ac-cf49ab0153b1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH KABUPATEN/KOTAMADYA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="279" height="20" uuid="3f6c2cfe-b7d2-49c0-a11c-a421ef9ea1c5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[DAERAH TINGKAT II : WONOGIRI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="40" width="356" height="20" uuid="3405cc03-618a-4405-9fc7-68a8dda57c1e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN KELAHIRAN DESA/KELURAHAN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="279" y="60" width="282" height="2" uuid="4a716914-31e5-43fa-acd2-066b0e6395a6"/>
+			</line>
+			<staticText>
+				<reportElement x="264" y="60" width="271" height="15" uuid="f51f6bc5-528f-48d4-824c-134c2e9fc0e7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[              Desa                                  :   Suci]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="75" width="271" height="15" uuid="ef815fce-db75-47c3-8d3f-26a1719f9936"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[              Kecamatan                        :   Pracimantoro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="90" width="171" height="15" uuid="996a141f-4332-4049-8f61-2a114584ca3b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[              Laporan Bulan                  :]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yyyy">
+				<reportElement x="446" y="90" width="100" height="15" uuid="6bb1b4e9-7faf-4692-b8a2-60eed7b9500f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="185" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="17" width="65" height="16" uuid="7edf50a9-36d9-44b2-a23c-609531625b0b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ PERIODE :]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yyyy">
+				<reportElement x="66" y="17" width="67" height="16" uuid="44572ed3-3037-4c67-aad9-fdae685a7367"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tgl1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="133" y="17" width="11" height="16" uuid="c5940915-c303-4ab8-b373-7339d1fb6c8e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[--]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yyyy">
+				<reportElement x="144" y="17" width="70" height="16" uuid="e78dbd24-842c-4df0-9c84-311c006f8a6c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tgl2}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement key="table 2" style="table 2" x="1" y="45" width="801" height="140" uuid="d1a39195-f3f6-40a9-beaf-209e3d4c4cc2"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="data_kelahiran" uuid="b9610365-2bbf-408c-a64c-06ecedeca5f8">
+						<datasetParameter name="tgl1">
+							<datasetParameterExpression><![CDATA[$P{tgl1}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="tgl2">
+							<datasetParameterExpression><![CDATA[$P{tgl2}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="78" uuid="fbad6339-eb3e-47bd-a9db-3883fc9677d4">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="2" y="0" width="76" height="30" uuid="7079bd81-8c6b-473d-a88d-e8ca892ed701"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NO KELAHIRAN]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="76" height="20" uuid="72bda2ce-429c-4548-8b66-c2b3f73d0fd1"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kelahiran_no_kelahiran}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="118" uuid="1c5c47a6-3d07-43ef-bf51-f4e806c0640e">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="118" height="30" uuid="5fbc2609-b984-45fb-96b2-fb505b830048"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NIK]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="118" height="20" uuid="5d3493ef-5853-403e-b0bd-268d60baa9a6"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kelahiran_nik}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="113" uuid="48135631-98c0-43c6-b951-8b44577175ad">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="113" height="30" uuid="42574865-b3d1-4047-af45-e45b58508f2b"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NO KK]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="113" height="20" uuid="ef8e3647-cb3a-4288-897d-09b31f13ad17"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kelahiran_no_kk}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="107" uuid="7e2f476b-88d5-43fd-87cf-574611172e8e">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="107" height="30" uuid="e84471fa-8348-4dae-9d27-7c36bc28bba5"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" isBold="true"/>
+								</textElement>
+								<text><![CDATA[TEMPAT LAHIR]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="107" height="20" uuid="96721d9d-09bb-4b81-9497-4d5902d636d5"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kelahiran_tempat_lahir}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="fa71444d-594e-4e3a-bad8-bd73ef8b8451">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="c3ace0c7-fd89-4b88-9306-77c9fe6526f7"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" isBold="true"/>
+								</textElement>
+								<text><![CDATA[TGL LAHIR]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField pattern="dd MMMMM yyyy">
+								<reportElement x="0" y="0" width="90" height="20" uuid="a2f976f5-e843-476d-b972-2cd2b139b190"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kelahiran_tgl_lahir}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="105" uuid="e64520cb-6b9c-4d9a-bf80-17de91781207">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="105" height="30" uuid="d8044ebc-9f9a-4eb1-a16a-440cbbdb7160"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" isBold="true"/>
+								</textElement>
+								<text><![CDATA[IBU]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="105" height="20" uuid="3080dc5a-197d-40e3-8b87-5fd4bfe4391a"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kelahiran_nama_ibu}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="95" uuid="690c6634-4edf-4c5a-88ed-42cfa4d07d7f">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="acde0251-46d5-400b-b167-f29a96a46292"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" isBold="true"/>
+								</textElement>
+								<text><![CDATA[AYAH]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="383f2f0b-d863-4e57-9e4c-2462ab10b9a3"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kelahiran_nama_ayah}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="2d7ab5a9-c067-427c-a6a4-eeae55485aac">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="c4ab86ec-04e5-49cc-a94b-b5d4e6e4e3a2"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" isBold="true"/>
+								</textElement>
+								<text><![CDATA[PELAPOR]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="a04ad628-1189-4833-8099-33a7fa0c870c"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kelahiran_nama_pelapor}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="19" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="17" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="158" splitType="Stretch">
+			<staticText>
+				<reportElement x="663" y="46" width="139" height="16" uuid="85be1922-1aa7-4085-a11a-80d970075d37"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[a.n KEPALA DESA SUCI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="689" y="62" width="78" height="16" uuid="5342718d-d909-45d3-bd39-cdbf44f30591"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Sekretaris Desa]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="678" y="117" width="100" height="20" uuid="9f301cf9-b0ed-4ad5-933d-82ae8ed95218"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nama_ptgs}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="663" y="30" width="26" height="16" uuid="5c61efca-0d4a-4980-b333-21d64e245980"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Suci,]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yyyy">
+				<reportElement x="699" y="30" width="103" height="16" uuid="6aebd0e1-be2f-4776-abc8-32ad0b92fe42"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="678" y="137" width="100" height="20" uuid="b21a7c9f-e7ca-41e3-b344-4e6c302e3e5f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nip_ptgs}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

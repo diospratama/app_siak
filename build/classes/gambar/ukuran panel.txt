@@ -1,0 +1,3 @@
+Panel:
+Panjang Panel: 1360 px
+Lebar Panel  :566 px

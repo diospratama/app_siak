@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="48c04702-fb25-472a-9684-803bfa022900">
+	<property name="ireport.zoom" value="1.100000000000014"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="2f05c068-275c-476e-b4af-42d83db7d4d5"/>
+	<subDataset name="data_penduduk" uuid="fe813322-0276-4ba1-af9d-78415f1084f7">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     penduduk.`nik` AS penduduk_nik,
+     penduduk.`no_kk` AS penduduk_no_kk,
+     penduduk.`nama` AS penduduk_nama,
+     penduduk.`jk` AS penduduk_jk,
+     penduduk.`pekerjaan` AS penduduk_pekerjaan,
+     penduduk.`pendidikan` AS penduduk_pendidikan,
+     penduduk.`no_telp` AS penduduk_no_telp
+FROM
+     `penduduk` penduduk]]>
+		</queryString>
+		<field name="penduduk_nik" class="java.lang.String"/>
+		<field name="penduduk_no_kk" class="java.lang.String"/>
+		<field name="penduduk_nama" class="java.lang.String"/>
+		<field name="penduduk_jk" class="java.lang.String"/>
+		<field name="penduduk_pekerjaan" class="java.lang.String"/>
+		<field name="penduduk_pendidikan" class="java.lang.String"/>
+		<field name="penduduk_no_telp" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="nama_ptgs" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nip_ptgs" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT	
+     penduduk.`jk` AS penduduk_jk,
+     penduduk.`pendidikan` AS penduduk_pendidikan,
+     penduduk.`pekerjaan` AS penduduk_pekerjaan,
+     penduduk.`no_telp` AS penduduk_no_telp,
+     penduduk.`nik` AS penduduk_nik,
+     penduduk.`no_kk` AS penduduk_no_kk,
+     penduduk.`nama` AS penduduk_nama
+     	
+    
+
+FROM
+     `penduduk` penduduk
+WHERE
+     penduduk.stts = 'kosong']]>
+	</queryString>
+	<field name="penduduk_jk" class="java.lang.String"/>
+	<field name="penduduk_pendidikan" class="java.lang.String"/>
+	<field name="penduduk_pekerjaan" class="java.lang.String"/>
+	<field name="penduduk_no_telp" class="java.lang.String"/>
+	<field name="penduduk_nik" class="java.lang.String"/>
+	<field name="penduduk_no_kk" class="java.lang.String"/>
+	<field name="penduduk_nama" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="113" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="279" height="20" uuid="24221369-e6d0-4f55-b0ac-cf49ab0153b1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH KABUPATEN/KOTAMADYA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="279" height="20" uuid="3f6c2cfe-b7d2-49c0-a11c-a421ef9ea1c5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[DAERAH TINGKAT II : WONOGIRI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="40" width="297" height="20" uuid="3405cc03-618a-4405-9fc7-68a8dda57c1e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN PENDUDUK DESA/KELURAHAN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="279" y="60" width="296" height="2" uuid="4a716914-31e5-43fa-acd2-066b0e6395a6"/>
+			</line>
+			<staticText>
+				<reportElement x="279" y="62" width="271" height="15" uuid="f51f6bc5-528f-48d4-824c-134c2e9fc0e7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[              Desa                                  :   Suci]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="77" width="271" height="15" uuid="ef815fce-db75-47c3-8d3f-26a1719f9936"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[              Kecamatan                        :   Pracimantoro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="92" width="171" height="15" uuid="996a141f-4332-4049-8f61-2a114584ca3b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[              Laporan Bulan                  :]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yyyy">
+				<reportElement x="461" y="92" width="100" height="15" uuid="6bb1b4e9-7faf-4692-b8a2-60eed7b9500f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="53" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="240" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 1" style="table 1" x="0" y="0" width="802" height="240" uuid="39b37abf-b425-4bad-bc47-0c57e86c8174"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="data_penduduk" uuid="70c18f61-ff06-431d-9c6d-c2657b971693">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="158" uuid="6e81a007-54dc-4bf9-a05e-6da9cf9c878c">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="158" height="30" uuid="18199f7a-1500-4f9e-ba28-dabb635d4e05"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NIK]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="158" height="20" uuid="68f54832-5dc1-4a76-9f4c-cb2c2017a87c"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{penduduk_nik}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="153" uuid="fa202fd8-11b5-442a-a354-ba45e3867721">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="153" height="30" uuid="cca54c03-fdc6-4a3b-9441-2ae5c6cee8ee"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NO KK]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="153" height="20" uuid="450202f7-de2f-4e19-a1da-6efca50bb9d7"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{penduduk_no_kk}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="125" uuid="77a2bd0d-c585-4454-8458-322ae0e7cbfd">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="124" height="30" uuid="66d74db0-e70c-4542-b51f-3b23ea183997"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NAMA]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="124" height="20" uuid="4edf9675-9f58-4519-9c99-eb94980471e1"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{penduduk_nama}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="57" uuid="b5725419-7d44-4efe-8c29-8e65679f5f24">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="57" height="30" uuid="1da3044a-f960-4eb9-9792-38b962769f39"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[GENDER]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="57" height="20" uuid="e950c2ec-e21f-4344-b702-c6c7451729b2"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{penduduk_jk}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="89" uuid="6e7d3e55-7935-4ae0-989a-3bd4129a1b29">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="89" height="30" uuid="2c06c370-5b7d-4cdc-be2e-ef925109455d"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[PEKERJAAN]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="89" height="20" uuid="4a808beb-c548-4e0a-ae65-c9369ae57731"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{penduduk_pekerjaan}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="121" uuid="8c940ef0-e92e-44db-811e-e194944a6c8b">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="121" height="30" uuid="85932c93-3350-4612-8e66-a13e66c40448"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[PENDIDIKAN]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="121" height="20" uuid="ccbb826d-68aa-4095-8fd1-69a8fbc987b0"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{penduduk_pendidikan}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="98" uuid="73c1fdff-c932-448b-b241-edabd0845b64">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="98" height="30" uuid="1be6dbe0-16b4-40c7-a3f8-4d11d51b08c5"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[TELEPHONE]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="98" height="20" uuid="c69c8fa6-9242-4bd9-85f1-2efbf2bcd73d"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{penduduk_no_telp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="32" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="155" splitType="Stretch">
+			<staticText>
+				<reportElement x="664" y="24" width="26" height="16" uuid="e94017ce-0fe7-480b-b630-749c8f173956"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Suci,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="690" y="56" width="78" height="16" uuid="0c8cf981-95fc-4cbe-be16-5b6fa838ea66"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Sekretaris Desa]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yyyy">
+				<reportElement x="700" y="24" width="103" height="16" uuid="189ad093-e696-45e7-a1b5-de0c9d3eb4bc"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="664" y="40" width="139" height="16" uuid="a211a2ec-c86b-4403-bf91-c6972919a0e3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[a.n KEPALA DESA SUCI]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="678" y="114" width="100" height="20" uuid="79e06a26-146a-4503-b798-db9cdacf2eaa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nama_ptgs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="678" y="134" width="100" height="20" uuid="fdedbbba-6b39-4535-ab8d-3c61b22378ae"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nip_ptgs}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

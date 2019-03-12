@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="48c04702-fb25-472a-9684-803bfa022900">
+	<property name="ireport.zoom" value="0.9090909090909374"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="2f05c068-275c-476e-b4af-42d83db7d4d5"/>
+	<subDataset name="New Dataset 1" uuid="70988d7a-db4a-46f7-b54c-aa026964ec01">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     data_kk.`no_kk` AS data_kk_no_kk,
+     data_kk.`nama_kepala_keluarga` AS data_kk_nama_kepala_keluarga,
+     data_kk.`alamat_kk` AS data_kk_alamat_kk,
+     data_kk.`rt` AS data_kk_rt,
+     data_kk.`rw` AS data_kk_rw,
+     data_kk.`desa_kelurahan` AS data_kk_desa_kelurahan,
+     data_kk.`kecamatan` AS data_kk_kecamatan,
+     data_kk.`kabupaten_kota` AS data_kk_kabupaten_kota,
+     data_kk.`provinsi` AS data_kk_provinsi
+FROM
+     `data_kk` data_kk]]>
+		</queryString>
+		<field name="data_kk_no_kk" class="java.lang.String"/>
+		<field name="data_kk_nama_kepala_keluarga" class="java.lang.String"/>
+		<field name="data_kk_alamat_kk" class="java.lang.String"/>
+		<field name="data_kk_rt" class="java.lang.String"/>
+		<field name="data_kk_rw" class="java.lang.String"/>
+		<field name="data_kk_desa_kelurahan" class="java.lang.String"/>
+		<field name="data_kk_kecamatan" class="java.lang.String"/>
+		<field name="data_kk_kabupaten_kota" class="java.lang.String"/>
+		<field name="data_kk_provinsi" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="Table Dataset 2" uuid="ea022dc5-4995-49c7-a6dc-93f815c0a5bb"/>
+	<parameter name="nama_ptgs" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nip_ptgs" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     data_kk.`no_kk` AS data_kk_no_kk,
+     data_kk.`nama_kepala_keluarga` AS data_kk_nama_kepala_keluarga,
+     data_kk.`alamat_kk` AS data_kk_alamat_kk,
+     data_kk.`rt` AS data_kk_rt,
+     data_kk.`rw` AS data_kk_rw,
+     data_kk.`desa_kelurahan` AS data_kk_desa_kelurahan,
+     data_kk.`kecamatan` AS data_kk_kecamatan,
+     data_kk.`kabupaten_kota` AS data_kk_kabupaten_kota,
+     data_kk.`kode_pos` AS data_kk_kode_pos,
+     data_kk.`provinsi` AS data_kk_provinsi,
+     data_kk.`akseptor` AS data_kk_akseptor
+FROM
+     `data_kk` data_kk]]>
+	</queryString>
+	<field name="data_kk_no_kk" class="java.lang.String"/>
+	<field name="data_kk_nama_kepala_keluarga" class="java.lang.String"/>
+	<field name="data_kk_alamat_kk" class="java.lang.String"/>
+	<field name="data_kk_rt" class="java.lang.String"/>
+	<field name="data_kk_rw" class="java.lang.String"/>
+	<field name="data_kk_desa_kelurahan" class="java.lang.String"/>
+	<field name="data_kk_kecamatan" class="java.lang.String"/>
+	<field name="data_kk_kabupaten_kota" class="java.lang.String"/>
+	<field name="data_kk_kode_pos" class="java.lang.String"/>
+	<field name="data_kk_provinsi" class="java.lang.String"/>
+	<field name="data_kk_akseptor" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="113" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="279" height="20" uuid="24221369-e6d0-4f55-b0ac-cf49ab0153b1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH KABUPATEN/KOTAMADYA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="279" height="20" uuid="3f6c2cfe-b7d2-49c0-a11c-a421ef9ea1c5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[DAERAH TINGKAT II : WONOGIRI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="40" width="356" height="20" uuid="3405cc03-618a-4405-9fc7-68a8dda57c1e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN KARTU KELUARGA DESA/KELURAHAN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="279" y="60" width="341" height="2" uuid="4a716914-31e5-43fa-acd2-066b0e6395a6"/>
+			</line>
+			<staticText>
+				<reportElement x="279" y="62" width="271" height="15" uuid="f51f6bc5-528f-48d4-824c-134c2e9fc0e7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[              Desa                                  :   Suci]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="77" width="271" height="15" uuid="ef815fce-db75-47c3-8d3f-26a1719f9936"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[              Kecamatan                        :   Pracimantoro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="92" width="171" height="15" uuid="996a141f-4332-4049-8f61-2a114584ca3b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[              Laporan Bulan                  :]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yyyy">
+				<reportElement x="461" y="92" width="100" height="15" uuid="6bb1b4e9-7faf-4692-b8a2-60eed7b9500f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="17" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="238" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 1" style="table 1" x="1" y="0" width="802" height="238" uuid="8f3e4267-e598-449e-b999-c96211e82e8e"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset 1" uuid="ac4089d0-698a-42a5-a605-a01d7fc16d5b">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="129" uuid="d251ddf9-73ef-4740-ad69-c40ae593ff3e">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="129" height="30" uuid="6c8d721b-2d14-4025-a835-0ba08d54386a"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NO KK]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="129" height="20" uuid="77f0607d-8731-4867-98f1-e9ff14a2a8a4"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kk_no_kk}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="124" uuid="9a26120c-c4d6-400b-a56f-f08e0952d2c8">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="124" height="30" uuid="fd94fb93-f095-409b-864e-bb5387867f52"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[KEPALA KELUARGA]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="124" height="20" uuid="113e4c01-17e1-486e-85f2-2154ce3f1b7d"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kk_nama_kepala_keluarga}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="ff7066d9-0da1-47ba-8710-8a2996b7a9a3">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="a2086856-b47b-4fcd-8487-f1768f0b9155"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ALAMAT]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="7501b593-08d8-446e-b15c-473958362ea7"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kk_alamat_kk}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="33" uuid="622cfe68-9b2b-4ff8-94c6-e6bfa305b874">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="33" height="30" uuid="22b53c4a-2c90-481f-810e-2c695dc1151a"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[RT]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="33" height="20" uuid="d83c0fae-492d-4713-9cd2-7174408c5dc7"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kk_rt}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="29" uuid="17a738c1-83ce-47ad-93cf-6914032fa327">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="29" height="30" uuid="5305b4f3-44e3-43a7-80a0-941ef7558d00"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[RW]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="29" height="20" uuid="db8fff11-0a79-421e-b8a2-5b1eaed977c5"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kk_rw}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="99" uuid="27c6a3ae-6425-455e-bc33-3156960ac1ee">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="99" height="30" uuid="8a3b8eec-da97-4f94-9707-9946822ec593"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[KELURAHAN]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="99" height="20" uuid="e1ab6abe-b231-47a3-826d-9b79c9aaec1a"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kk_desa_kelurahan}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="107" uuid="7fe55c5b-c7c9-4906-be5f-5061d9a86635">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="107" height="30" uuid="7bf11679-2412-45e0-a267-cf67ce6ae33b"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[KECAMATAN]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="107" height="20" uuid="69107705-a2d8-464c-8484-7af863365369"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kk_kecamatan}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="98" uuid="8734cc28-c5c9-4304-8353-341dda780a4b">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="98" height="30" uuid="fd305a45-0a13-4e67-9862-0cc7a04cd26a"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[KABUPATEN]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="98" height="20" uuid="4fa46467-5eb6-4a74-b7ac-61eb946fa0cd"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kk_kabupaten_kota}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="f64f5ddb-a714-4c06-ad51-bfbf4d814c61">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="ca857720-e5d5-4b9a-b747-d05d33cdc8f2"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[PROVINSI]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="469b423f-729c-40ce-a021-95fcacc6fd68"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{data_kk_provinsi}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="61" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="48" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="142" splitType="Stretch">
+			<staticText>
+				<reportElement x="667" y="35" width="136" height="16" uuid="33e257b8-e2c7-4533-8e82-a20b8aa46451"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[a.n KEPALA DESA SUCI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="693" y="51" width="78" height="16" uuid="d300e395-5e02-434e-8c2f-692ce6c67afc"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Sekretaris Desa]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="686" y="102" width="100" height="20" uuid="b2c9a6f9-060e-4a4a-8102-1bb3cc862bc3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nama_ptgs}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="667" y="19" width="26" height="16" uuid="4cad6e42-3d0e-42e8-b128-a41d062495a5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Suci,]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yyyy">
+				<reportElement x="703" y="19" width="100" height="16" uuid="8e630d4f-a3e5-4875-868b-23d529959c00"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="686" y="122" width="100" height="20" uuid="6ed8dd00-dbe7-4954-975a-6fa5e80cbc43"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nip_ptgs}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
